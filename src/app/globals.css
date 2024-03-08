@@ -1,0 +1,42 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --textcolor: 0, 0, 0;
+  --background-color: 214, 219, 220;
+} 
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --textcolor: 255, 255, 255;
+    --background-color: 14, 14, 14;
+  }
+}
+
+body {
+  color: rgb(var(--textcolor));
+  background: rgb(var(--background-color));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Defining Fonts from layout.tsx */
+.archivo-black {
+  font-family: var(--font-archivo_black);
+}
+
+.ubuntu-regular {
+  font-family: var(--font-ubuntu);
+  font-weight: 300;
+}
+
+.ubuntu-bold {
+  font-family: var(--font-ubuntu);
+  font-weight: 700;
+}
